@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Note</title>
     <style>
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
         }
-
+       
         h1 {
             text-align: center;
             margin-top: 20px;
@@ -124,6 +125,14 @@
             }
         }
     </style>
+    <script>
+        // JavaScript function for delete confirmation
+        function confirmDelete(event) {
+            if (!confirm("Are you sure you want to delete this note?")) {
+                event.preventDefault(); // Prevent form submission if canceled
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -164,7 +173,7 @@
             @csrf
             @method('delete')
             <div class="form-actions">
-                <button class="delete-button" type="submit">Delete</button>
+                <button class="delete-button" type="submit" onclick="confirmDelete(event)">Delete</button>
             </div>
         </form>
     </div>
