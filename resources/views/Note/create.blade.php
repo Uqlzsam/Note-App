@@ -12,11 +12,11 @@
             background-color: #f4f4f9;
         }
 
-        .back-button {
+        .home-button {
             position: absolute;
             top: 15px;
             left: 15px;
-            background-color: #4CAF50;
+            background-color: lightgreen;
             color: white;
             border: none;
             border-radius: 50%;
@@ -30,7 +30,7 @@
             text-decoration: none;
         }
 
-        .back-button:hover {
+        .home-button:hover {
             background-color: #007bb5;
         }
 
@@ -128,8 +128,8 @@
 </head>
 <body>
 
-    <!-- Back to Index Button with Icon -->
-    <a href="{{ route('note.index') }}" class="back-button" title="Back to Index">&#8592;</a>
+    <!-- Home Button with Home Icon -->
+    <a href="{{ route('note.index') }}" class="home-button" title="Back to Index">🏠</a>
 
     <h1>Folderly</h1>
 
