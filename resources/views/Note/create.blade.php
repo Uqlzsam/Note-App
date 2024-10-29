@@ -16,7 +16,7 @@
             position: absolute;
             top: 15px;
             left: 15px;
-            background-color: #008CBA;
+            background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 50%;
