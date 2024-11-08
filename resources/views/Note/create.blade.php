@@ -126,8 +126,9 @@
         }
     </style>
 </head>
-<body>
 
+
+<body>
     <!-- Home Button with Home Icon -->
     <a href="{{ route('note.index') }}" class="home-button" title="Back to Index">🏠</a>
 
@@ -150,7 +151,7 @@
             @csrf
             <div>
                 <label for="title">Title</label>
-                <input type="text" name="title" id="title" required>
+                <input type="text" name="title" id="title">
             </div>
             <div>
                 <label for="content">Content</label>

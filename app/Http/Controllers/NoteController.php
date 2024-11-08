@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Note;
+use App\Models\Note; 
 
 class NoteController extends Controller
 {
@@ -11,13 +11,13 @@ class NoteController extends Controller
         return view('note.index', ['notes' => Note::all()]);
     }
 
+
     public function create() {
         return view('note.create');
     }
-
     public function store(Request $request) {
         $request->validate([
-            'title'=>'nullable',
+            'title'=>'nullable', 
             'content'=>'required|max:10000'
         ]);
         
@@ -38,7 +38,6 @@ class NoteController extends Controller
         $note->update($request->all());
         return redirect()->route('note.index', $note);
     }
-
     public function destroy(Note $note) {
         $note->delete();
         return redirect()->route('note.index');
